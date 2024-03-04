@@ -1,0 +1,18 @@
+{
+    "name": "armaulan/dms-telegram",
+    "description": "DMS Telegram Extention",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Armaulan\\DmsTelegram\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arya Sariroti"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
