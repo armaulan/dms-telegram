@@ -79,4 +79,8 @@ class Telegram {
         return "Document sent successfully";
 
     }
+
+    public function setKey($key) {
+        $this->key = $key;
+    }
 }
