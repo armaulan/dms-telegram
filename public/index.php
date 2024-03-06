@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Asia/jakarta');
+
 # set default index path
 $path = '/index';
 
