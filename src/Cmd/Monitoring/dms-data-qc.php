@@ -85,6 +85,12 @@ if (file_exists($filePath)) {
         exit();
 
     } else {
+
+        # Create Log: no issue
+        $log = new Logger('name');
+        $log->pushHandler(new StreamHandler('../log/dms-monitoring-noissue.txt', Level::Debug));
+        $log->info("No Issue: ". $data->scriptName);
+
         if(isset($data->noIssueInfo)) {
             $tlgrm = new Telegram('BOT_RTPDM');
             $tlgrm->setKey($data->botKey);
