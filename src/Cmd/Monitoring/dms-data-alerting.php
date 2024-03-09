@@ -73,7 +73,7 @@ if (file_exists($filePath)) {
         # Adding additional information for downloadble script
         $dotenv = Dotenv::createImmutable('../');
         $dotenv->load();
-        $stringResult .= $_ENV['SERVER']. "/dms-query-monitoring?scriptName=". $data->scriptName;
+        $stringResult .= $_ENV['SERVER']. "/dms-data-monitoring?scriptName=". $data->scriptName;
         
         # Send to telegram
         $tlgrm = new Telegram('BOT_RTPDM');
