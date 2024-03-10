@@ -68,12 +68,11 @@ $server_check_version = '1.0.4';
 	$total_time = round($time_taken,4);
 
     #$text = '{"ram":'.$memusage.',"cpu":'.$cpuload.',"disk":'.$diskusage.',"connections":'.$totalconnections.'}';
-	$text = "RAM: $memusage%\n
-		CPU: $cpuload%\n
-		DISK: $diskusage%\n
-		";
+	$text = "RAM: $memusage%
+	CPU: $cpuload%
+	DISK: $diskusage%
+	";
 	
-
     $tlgrm->sendMessage($sender, $text);
 	echo "Succeed";
 	exit();
