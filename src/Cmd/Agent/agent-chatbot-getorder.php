@@ -66,16 +66,22 @@ $query2 = "
 $db = new Database();
 try {
     $db->getConnection("AGENT");
+    $data = $db->getAgentData($query);
 } catch (PDOException $e) {
+    $tlgrm->sendMessage('-1001638586770', "Internal DB Error");
     echo "Connection DB Issue";
     exit();
 }
 
-$data = $db->getAgentData($query);
-
 if(!empty($data)){
-    $data2 = $db->getAgentData($query2);
-
+    try {
+        $data2 = $db->getAgentData($query2);
+    } catch (PDOException $e) {
+        $tlgrm->sendMessage('-1001638586770', "Internal DB Error");
+        echo "Connection DB Issue";
+        exit();
+    }
+    
     $txt = "";
     foreach ($data as $row) {
         $txt .=  $row['order_number']. "\n" 
