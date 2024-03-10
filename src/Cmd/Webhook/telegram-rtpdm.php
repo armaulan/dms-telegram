@@ -27,7 +27,8 @@ $list = array(
     'rtpdm-ping-server' => '../src/Cmd/Server/server-ping.php',
     'rtpdm-delay' => '../src/Cmd/Server/Server-delay.php',
     'rtpdm-agent-last' => '../src/Cmd/Agent/agent-last-trans.php',
-    'rtpdm-get-query' => '../src/Cmd/Server/server-slowquery-catch.php'
+    'rtpdm-get-query' => '../src/Cmd/Server/server-slowquery-catch.php',
+    'rtpdm-cpu' => '../src/Cmd/Server/server-usage.php'
 );
 
 if(isset($list[$messageFirst])){

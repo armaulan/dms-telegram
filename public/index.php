@@ -20,7 +20,8 @@ $routes = array(
 
     # Server
     '/server-crons-delay' => '../src/Cmd/Server/server-crons-delay.php',
-    '/server-crons-slowquery' => '../src/Cmd/Server/server-crons-slowquery.php'
+    '/server-crons-slowquery' => '../src/Cmd/Server/server-crons-slowquery.php',
+    '/server-internal-usage' => '../src/Cmd/Server/server-usage.php'
 );
 
 if (isset($routes[$path])) {
