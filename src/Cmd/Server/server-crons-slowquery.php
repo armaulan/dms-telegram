@@ -31,7 +31,7 @@ foreach($array as $item){
             $temp_info = substr($item2['INFO'], 0, 20);
        } 
     
-       if( ($temp_command == "Query" && $temp_time > 350) ) {
+       if( ($temp_command == "Query" && $temp_time > 350) || ($temp_command == "Execute" && $temp_time > 350) ) {
            $temp_array['server'] = $temp_server;
            $temp_array['id'] = $temp_id;
            $temp_array['user'] = $temp_user;
