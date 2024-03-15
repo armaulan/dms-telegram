@@ -55,7 +55,7 @@ if (file_exists($filePath)) {
 
     ob_end_clean(); // Clear any existing output buffering
     header("Content-Type: application/json");
-    echo json_encode($queryResult);
+    echo json_encode($queryResult, JSON_UNESCAPED_SLASHES);
     exit();
 
 # If file doesn't exist
