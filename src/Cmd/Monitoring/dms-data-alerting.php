@@ -35,11 +35,12 @@ if (file_exists($filePath)) {
 
     # Create DB CONNECTION
     try { 
-        if(substr(strtolower($data->scriptName), 0, 5 ) == "agent") {
+        echo substr(strtolower($data->scriptName), 0, 4 );
+        if(substr(strtolower($data->scriptName), 0, 4 ) == "agent") {
             $db->getConnection("AGENT");
             $queryResult = $db->getAgentData(file_get_contents($filePath));
 
-        } else if(substr(strtolower($data->scriptName), 0, 5 ) == "dist") {
+        } else if(substr(strtolower($data->scriptName), 0, 4 ) == "dist") {
             $db->getConnection("DISTRIBUTOR");
             $queryResult = $db->getDistributorData(file_get_contents($filePath));
         }
@@ -97,12 +98,12 @@ if (file_exists($filePath)) {
             $tlgrm->sendMessage($data->noIssueInfo, "No Issue: ". $data->scriptName);
 
             header("HTTP/1.0 200 Success");
-            echo "Success !";
+            echo "No Issue: Success !";
             exit();
         }
 
         header("HTTP/1.0 200 Success");
-        echo "Success !";
+        echo "No Issue: Success !";
         exit();
     }
 
