@@ -35,8 +35,7 @@ if (file_exists($filePath)) {
 
     # Create DB CONNECTION
     try { 
-        echo substr(strtolower($data->scriptName), 0, 4 );
-        if(substr(strtolower($data->scriptName), 0, 4 ) == "agent") {
+        if(substr(strtolower($data->scriptName), 0, 4 ) == "agen") {
             $db->getConnection("AGENT");
             $queryResult = $db->getAgentData(file_get_contents($filePath));
 
