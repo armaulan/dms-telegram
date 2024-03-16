@@ -28,7 +28,8 @@ $list = array(
     'rtpdm-delay' => '../src/Cmd/Server/Server-delay.php',
     'rtpdm-agent-last' => '../src/Cmd/Agent/agent-last-trans.php',
     'rtpdm-get-query' => '../src/Cmd/Server/server-slowquery-catch.php',
-    'rtpdm-cpu' => '../src/Cmd/Server/server-usage.php'
+    'rtpdm-cpu' => '../src/Cmd/Server/server-usage.php',
+    'rtpdm-dist-po' => '../src/Cmd/Dist/dist-depo-perform.php',
 );
 
 if(isset($list[$messageFirst])){
